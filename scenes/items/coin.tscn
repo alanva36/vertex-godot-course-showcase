@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://csy2b8adnlcbu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vxkn6"]
+
+[node name="Coin" type="Area2D" unique_id=1001752907]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1537057414]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1827438415]
+shape = SubResource("CircleShape2D_vxkn6")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1236994031]
+
+[node name="CollectParticles" type="GPUParticles2D" parent="." unique_id=1252664037]

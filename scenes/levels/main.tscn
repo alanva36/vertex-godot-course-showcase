@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://pc3hwtd7w6k3"]
+
+[node name="Main" type="Node2D" unique_id=1037756931]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1498408718]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1981237483]
+
+[node name="Lights" type="Node2D" parent="." unique_id=226514735]
+
+[node name="Items" type="Node2D" parent="." unique_id=1815122084]
