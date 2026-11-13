@@ -1,6 +1,28 @@
 [gd_scene format=3 uid="uid://pc3hwtd7w6k3"]
 
+[ext_resource type="Texture2D" uid="uid://dtyxeb0g17h4x" path="res://assets/sprites/background/back.png" id="1_2vj2h"]
+[ext_resource type="PackedScene" uid="uid://dh87ltb882pai" path="res://scenes/player/player.tscn" id="1_y0acb"]
+[ext_resource type="Texture2D" uid="uid://f20thgxqsqmm" path="res://assets/sprites/background/middle.png" id="2_y0acb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m1fe"]
+size = Vector2(900, 20)
+
 [node name="Main" type="Node2D" unique_id=1037756931]
+
+[node name="ParallaxSky" type="Parallax2D" parent="." unique_id=490159778]
+repeat_size = Vector2(384, 0)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxSky" unique_id=1031209747]
+texture = ExtResource("1_2vj2h")
+centered = false
+
+[node name="ParallaxMiddle" type="Parallax2D" parent="." unique_id=1358754689]
+repeat_size = Vector2(176, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxMiddle" unique_id=388417846]
+position = Vector2(0, 100)
+texture = ExtResource("2_y0acb")
+centered = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1498408718]
 
@@ -9,3 +31,18 @@
 [node name="Lights" type="Node2D" parent="." unique_id=226514735]
 
 [node name="Items" type="Node2D" parent="." unique_id=1815122084]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=774479961]
+position = Vector2(0, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=7292984]
+position = Vector2(339, 0)
+shape = SubResource("RectangleShape2D_4m1fe")
+
+[node name="Player" parent="." unique_id=881048510 instance=ExtResource("1_y0acb")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1220147297]
+limit_left = 0
+limit_top = 0
+limit_right = 3600
+limit_bottom = 240
