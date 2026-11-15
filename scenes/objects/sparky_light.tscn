@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://biomfe40yk5g8"]
+
+[ext_resource type="Texture2D" uid="uid://sypp880v5p3" path="res://particles/spark.png" id="1_s5tpr"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nji56"]
+lifetime_randomness = 0.55
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(0.25, 0.55, 0.725)
+gravity = Vector3(20, -100, 20)
+linear_accel_min = -81.68
+linear_accel_max = 33.839996
+radial_accel_min = -19.450003
+radial_accel_max = 9.149998
+scale_min = 0.0
+scale_over_velocity_max = 0.29999998
+hue_variation_min = -0.15000002
+hue_variation_max = -2.2351742e-08
+
+[sub_resource type="Gradient" id="Gradient_g0hyi"]
+offsets = PackedFloat32Array(0, 0.6084337, 1)
+colors = PackedColorArray(0.30588236, 0, 0, 1, 0.7333894, 0.7110068, 0.37041909, 1, 0.30588236, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qjn8m"]
+gradient = SubResource("Gradient_g0hyi")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.8)
+
+[node name="SparkyLight" type="Node2D" unique_id=1522767946]
+
+[node name="Particles" type="GPUParticles2D" parent="." unique_id=1402957614]
+amount = 2
+texture = ExtResource("1_s5tpr")
+preprocess = 0.5
+process_material = SubResource("ParticleProcessMaterial_nji56")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=261787779]
+position = Vector2(-4.7683716e-07, 1.7881393e-07)
+scale = Vector2(0.21875, 0.18750001)
+energy = 0.55
+texture = SubResource("GradientTexture2D_qjn8m")

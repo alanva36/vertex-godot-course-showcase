@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://cp85yvefx3d23"]
 
+[ext_resource type="Script" uid="uid://dcy1txj0gs1h3" path="res://scenes/ui/score.gd" id="1_0mwgc"]
+
 [node name="HUD" type="CanvasLayer" unique_id=38970433]
+
+[node name="Label" type="Label" parent="." unique_id=1824666896]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -30.0
+offset_right = 85.0
+offset_bottom = -5.0
+grow_vertical = 0
+script = ExtResource("1_0mwgc")
