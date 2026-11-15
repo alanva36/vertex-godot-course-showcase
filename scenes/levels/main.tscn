@@ -10,6 +10,7 @@ size = Vector2(900, 20)
 [node name="Main" type="Node2D" unique_id=1037756931]
 
 [node name="ParallaxSky" type="Parallax2D" parent="." unique_id=490159778]
+scroll_scale = Vector2(0.8, 0.8)
 repeat_size = Vector2(384, 0)
 
 [node name="Sky" type="Sprite2D" parent="ParallaxSky" unique_id=1031209747]
@@ -18,6 +19,7 @@ centered = false
 
 [node name="ParallaxMiddle" type="Parallax2D" parent="." unique_id=1358754689]
 repeat_size = Vector2(176, 0)
+repeat_times = 7
 
 [node name="Middle" type="Sprite2D" parent="ParallaxMiddle" unique_id=388417846]
 position = Vector2(0, 100)
@@ -25,6 +27,7 @@ texture = ExtResource("2_y0acb")
 centered = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1498408718]
+color = Color(1.2425227, 0.93895376, 0.66288674, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1981237483]
 
@@ -44,5 +47,5 @@ shape = SubResource("RectangleShape2D_4m1fe")
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1220147297]
 limit_left = 0
 limit_top = 0
-limit_right = 3600
+limit_right = 1800
 limit_bottom = 240
