@@ -360,3 +360,4 @@ limit_bottom = 240
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=583643780]
 stream = ExtResource("10_rssyh")
 autoplay = true
+parameters/looping = true
